@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>add</title>
+</head>
+<body>
+<h3>查找資料</h3>
+
+<tr th:object="${accounttemp}" method ="get">
+    <input type="text" th:field="*{account}"/>
+    <input type="text" th:field="*{password}"/>
+    <input type="text" th:field="*{name}"/>
+
+</tr>
+
+<form th:action="@{/update}" th:object="${accounttemp}" method="post">
+    <input type="hidden" name="id" th:value="*{id}">
+    <input type="hidden" name="account" th:value="*{account}">
+    <ul>
+        <li>password:<input type="text" name="password"></li>
+        <li>name:<input type="text" name="name" ></li>
+        <li><input type="submit" value="Update"></li>
+    </ul>
+</form>
+
+
+<p></p>
+</body>
+</html>

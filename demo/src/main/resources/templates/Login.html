@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>登入帳號</title>
+</head>
+<body>
+<form action="#" th:action="@{/Verify}" th:object="${accounttemp}" method="post">
+    <ul>
+        <p>帳號:<input type="text" name = account th:field="*{account}"/></p>
+        <p>密碼:<input type="text" name = password th:field="*{password}"/></p>
+        <p>密碼:<input type="text" name = name th:field="*{name}"/></p>
+        <input type="submit"/>
+    </ul>
+</form>
+</body>
+</html>

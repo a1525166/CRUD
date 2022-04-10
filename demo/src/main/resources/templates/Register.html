@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>註冊帳號</title>
+</head>
+<body>
+<form action="#" th:action="@{/adduser}" th:object="${accounttemp}" method="post">
+    <ul>
+        <p>註冊新帳號:<input type="text" th:field="*{account}"/></p>
+        <p>密碼:<input type="text" th:field="*{password}"/></p>
+        <p>暱稱:<input type="text" th:field="*{name}"/></p>
+        <p></p><input type="submit" value="確定"/>
+    </ul>
+</form>
+</body>
+</html>

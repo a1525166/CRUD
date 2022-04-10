@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+    帳號登入系統
+</title>
+<body>
+
+<tr th:each="list:${list}">
+    <td th:text="${list.account}">account</td>
+    <td th:text="${list.password}">password</td>
+    <td th:text="${list.name}">name</td>
+</tr>
+
+<form action="#" th:action="@{/add}" th:object="${accounttemp}" method="post">
+    <input type="text" th:field="*{account}"/>
+    <input type="text" th:field="*{password}"/>
+    <input type="text" th:field="*{name}"/>
+    <input type="submit"/>
+</form>
+
+<h2>Delete</h2>
+<form action="#" th:action="@{/delete}" th:object="${accounttemp}" method="delete">
+    <input type="text" th:field="*{id}"/>
+</form>
+
+<h2>Find</h2>
+<form action="#" th:action="@{/find}" th:object="${account}" method="post">
+    <input type="text" name="account"/>
+</form>
+</body>
