@@ -59,7 +59,6 @@ public class LoginController {
 
     @PostMapping("/find")
     public String findByAccount(Model model, String account){
-
         Account account1 =  loginService.findByaccount(account);
         model.addAttribute("accounttemp", account1 );
         return "find";

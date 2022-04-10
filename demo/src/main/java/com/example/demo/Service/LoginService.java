@@ -18,14 +18,17 @@ public class LoginService {
    // }
 
     public void addAccount(Account accounttemp){
+
         accountdao.save(accounttemp);
     }
 
     public void deletePersonById(Long id){
+
         accountdao.deleteById((long) id);
     }
 
     public Account findByaccount(String account){
+
         return accountdao.findByAccount(account);
     }
 
